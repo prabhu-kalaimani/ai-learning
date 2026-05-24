@@ -8,4 +8,6 @@ nav:
   - NLP: nlp.md
 
 markdown_extensions:
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences

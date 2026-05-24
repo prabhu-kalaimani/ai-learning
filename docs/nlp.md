@@ -22,6 +22,11 @@ Topics Covered in this module
 
 Text Pre-Processing:
 
+1. Lower Casing text
 The first step in pre-processing is to convert the text to lower case. This will help to reduce the number of tokens
 as computer sees apple and Apple as two different string. In python we use str.lower() method to convert to lower case
+
 Example:
+```python
+--8<-- "src/ai_learning/nlp/nlp.py:1:60"
+```
