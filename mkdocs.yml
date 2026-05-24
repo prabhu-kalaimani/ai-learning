@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: LLM ( Large Language Model )
+
+theme:
+  name: material
+
+nav:
+  - Home: index.md
