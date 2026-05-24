@@ -10,6 +10,9 @@ __pycache__/
 
 # poetry
 
+#mkdocs sites
+.site/
+
 # Test cache folder  and files
 .pytest_cache/
 
