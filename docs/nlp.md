@@ -18,3 +18,10 @@ Topics Covered in this module
 6. Creating Custom Classifiers
 7. Example application
 8. Feature of NLP
+
+
+Text Pre-Processing:
+
+The first step in pre-processing is to convert the text to lower case. This will help to reduce the number of tokens
+as computer sees apple and Apple as two different string. In python we use str.lower() method to convert to lower case
+Example:
