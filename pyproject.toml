@@ -11,7 +11,8 @@ dependencies = [
     "mkdocs (>=1.6.1,<2.0.0)",
     "mkdocs-material (>=9.7.6,<10.0.0)",
     "nltk (>=3.9.4,<4.0.0)",
-    "pytest (>=9.0.3,<10.0.0)"
+    "pytest (>=9.0.3,<10.0.0)",
+    "ruff (>=0.15.14,<0.16.0)"
 ]
 
 [tool.poetry]
