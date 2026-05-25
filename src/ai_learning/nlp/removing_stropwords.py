@@ -12,36 +12,24 @@ Steps:
 3. Create a variable and extract the stop words
 
 """
-
+import logging
 import nltk
 from nltk.corpus import stopwords
 
 nltk.download("stopwords")
 
-# Original string
-inp_str = "It was too far to go to the shop and he did not want her to walk"
 
-# store the stop words in a variable
-en_stp = stopwords.words("English")
-tam_stp = stopwords.words("Tamil")
+def remove_stopwords(inp_str: str, lang: str='eng' )-> str:
+    if lang == 'tamil':
+        stp_list = stopwords.words("Tamil")
+    else:
+        stp_list = stopwords.words("English")
 
+    status = " ".join([word for word in inp_str if word not in stp_list])
+    return status
 
-# filter all the stop words and create a list ( list comprehension). Don't forget to create lower case
-filtered_txt = " ".join(
-    [item for item in inp_str.lower().split() if item not in en_stp]
-)
-print(f"Filtered text : {filtered_txt: >10}")
+def append_stopwords(word: str, stp_list: dict)-> None:
+    stp_list.append(word)
 
-# You can add words to stop string because it's a list
-en_stp.append("go")
-filtered_txt = " ".join(
-    [item for item in inp_str.lower().split() if item not in en_stp]
-)
-print(f"Filtered text : {filtered_txt: >10}")
-
-# You can also add words to the stop word dictionary
-en_stp.remove("the")
-filtered_txt = " ".join(
-    [item for item in inp_str.lower().split() if item not in en_stp]
-)
-print(f"Filtered text : {filtered_txt: >10}")
+def remove_stopwords(word: str, stp_list: dict)-> None:
+    stp_list.remove(word)
