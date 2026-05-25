@@ -21,9 +21,9 @@ nltk.download("stopwords")
 
 def remove_stopwords(inp_str: str, lang: str = "eng") -> str:
     if lang == "tamil":
-        stp_list = stopwords.words("Tamil")
+        stp_list = stopwords.words("tamil")
     else:
-        stp_list = stopwords.words("English")
+        stp_list = stopwords.words("english")
 
     status = " ".join([word for word in inp_str.lower().split() if word not in stp_list])
     return status
