@@ -30,3 +30,7 @@ Example:
 ```python
 --8<-- "src/ai_learning/nlp/nlp.py:1:60"
 ```
+
+2. Removing Stop words
+This is the first step in nlp. Stop words does not make any sense to machine learning. Example Stop words ( is, in , the, off)
+We use nltk library from python to remove stop words in our example.

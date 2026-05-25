@@ -6,10 +6,11 @@ authors = [
     {name = "prabhu",email = "prabhu.mc2@gmail.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.12,<3.14"
 dependencies = [
     "mkdocs (>=1.6.1,<2.0.0)",
-    "mkdocs-material (>=9.7.6,<10.0.0)"
+    "mkdocs-material (>=9.7.6,<10.0.0)",
+    "nltk (>=3.9.4,<4.0.0)"
 ]
 
 [tool.poetry]
