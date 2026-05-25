@@ -27,10 +27,6 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
 
-      - name: Download NLTK stopwords
-        run: |
-          poetry run python -c "import nltk; nltk.download('stopwords')"
-
       - name: Run tests
         run: poetry run pytest tests/
 
