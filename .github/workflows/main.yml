@@ -1,0 +1,56 @@
+name: Pull Request
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify_lint_score:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Virtual Env setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Poetry
+        run: pip install poetry
+
+      - name: Install dependencies
+        run: poetry install --no-interaction --no-root
+
+      - name: Run tests
+        run: poetry run pytest tests/
+
+      - name: Run Ruff (lint)
+        run: poetry run ruff check .
+
+      - name: Run Ruff (format check)
+        run: poetry run ruff format --check .
+
+      - name: Calculate Ruff score
+        id: ruff_score
+        run: |
+          SCORE=$(poetry run ruff check --output-format text | grep -c "error")
+          RAW=$(echo "scale=2; 10 - ($SCORE / 10)" | bc)
+          echo "score=$RAW" >> $GITHUB_OUTPUT
+
+      - name: Enforce Ruff score >= 9.0
+        run: |
+          echo "Ruff score: ${{ steps.ruff_score.outputs.score }}"
+          python3 - <<EOF
+          import sys
+          score = float("${{ steps.ruff_score.outputs.score }}")
+          if score < 9.0:
+          print(f" Ruff score too low: {score}")
+          sys.exit(1)
+          print(f" Ruff score OK: {score}")
+          EOF
