@@ -12,15 +12,15 @@ Steps:
 3. Create a variable and extract the stop words
 
 """
-import logging
+
 import nltk
 from nltk.corpus import stopwords
 
 nltk.download("stopwords")
 
 
-def remove_stopwords(inp_str: str, lang: str='eng' )-> str:
-    if lang == 'tamil':
+def remove_stopwords(inp_str: str, lang: str = "eng") -> str:
+    if lang == "tamil":
         stp_list = stopwords.words("Tamil")
     else:
         stp_list = stopwords.words("English")
@@ -28,8 +28,10 @@ def remove_stopwords(inp_str: str, lang: str='eng' )-> str:
     status = " ".join([word for word in inp_str if word not in stp_list])
     return status
 
-def append_stopwords(word: str, stp_list: dict)-> None:
+
+def append_stopwords_dict(word: str, stp_list: dict) -> None:
     stp_list.append(word)
 
-def remove_stopwords(word: str, stp_list: dict)-> None:
+
+def remove_stopwords_dict(word: str, stp_list: dict) -> None:
     stp_list.remove(word)
