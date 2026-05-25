@@ -25,6 +25,7 @@ logging.basicConfig(
             LOG_FILE, maxBytes=5_00_0000, backupCount=5, encoding="utf-8"
         ),
     ],
+    force=True,
 )
 
 
