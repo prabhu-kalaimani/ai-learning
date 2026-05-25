@@ -6,25 +6,28 @@ and to a rotating log file. The log file is capped at 5 MB, and up to 5 backup f
 the log directory remains clean and prevents uncontrolled log growth.
 """
 
-import logging as logger
+import logging
 import os
 from logging.handlers import RotatingFileHandler
 
 LOG_FOLDER = "logs"
 os.makedirs(LOG_FOLDER, exist_ok=True)
 LOG_FILE = os.path.join(LOG_FOLDER, "ai_learning.log")
+LOGGER_LEVEL = logging.DEBUG
 
 # config the root logger
-logger.basicConfig(
-    level=logger.INFO,
+logging.basicConfig(
+    level=LOGGER_LEVEL,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logger.StreamHandler(),
-        RotatingFileHandler(LOG_FILE, maxBytes=5000000, backupCount=5),
+        logging.StreamHandler(),
+        RotatingFileHandler(
+            LOG_FILE, maxBytes=5_00_0000, backupCount=5, encoding="utf-8"
+        ),
     ],
 )
 
 
 # get logger method that returns the logger object
-def get_logger(name: str) -> logger.Logger:
-    return logger.getLogger(name)
+def get_logger(name: str) -> logging.Logger:
+    return logging.getLogger(name)
