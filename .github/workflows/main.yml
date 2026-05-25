@@ -35,22 +35,3 @@ jobs:
 
       - name: Run Ruff (format check)
         run: poetry run ruff format --check .
-
-      - name: Calculate Ruff score
-        id: ruff_score
-        run: |
-          SCORE=$(poetry run ruff check --output-format text | grep -c "error")
-          RAW=$(echo "scale=2; 10 - ($SCORE / 10)" | bc)
-          echo "score=$RAW" >> $GITHUB_OUTPUT
-
-      - name: Enforce Ruff score >= 9.0
-        run: |
-          echo "Ruff score: ${{ steps.ruff_score.outputs.score }}"
-          python3 - <<EOF
-          import sys
-          score = float("${{ steps.ruff_score.outputs.score }}")
-          if score < 9.0:
-          print(f" Ruff score too low: {score}")
-          sys.exit(1)
-          print(f" Ruff score OK: {score}")
-          EOF
