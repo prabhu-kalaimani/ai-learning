@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  verify_lint_score:
+  verify_ruff_and test:
     runs-on: ubuntu-latest
 
     steps:
