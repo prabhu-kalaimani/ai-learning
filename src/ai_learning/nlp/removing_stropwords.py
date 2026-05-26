@@ -19,7 +19,13 @@ from nltk.corpus import stopwords
 nltk.download("stopwords")
 
 
-def remove_stopwords(inp_str: str, lang: str = "eng") -> str:
+def filter_stop_words(inp_str: str, lang: str = "eng") -> str:
+    """
+    This method will filter the stop words from the string
+    :param inp_str: Input string where stop words will be removed from
+    :param lang: language
+    :return: String with removed stop words
+    """
     if lang == "tamil":
         stp_list = stopwords.words("tamil")
     else:
@@ -31,9 +37,21 @@ def remove_stopwords(inp_str: str, lang: str = "eng") -> str:
     return status
 
 
-def append_stopwords_dict(word: str, stp_list: dict) -> None:
+def append_stopwords(word: str, stp_list: list) -> None:
+    """
+    Method to add new words to stop word list.
+    :param word: Word to be added to stop word list
+    :param stp_list: Stop word list
+    :return: None
+    """
     stp_list.append(word)
 
 
-def remove_stopwords_dict(word: str, stp_list: dict) -> None:
+def remove_stopwords(word: str, stp_list: dict) -> None:
+    """
+    Method to remove a word from stop word list
+    :param word: Word to be removed
+    :param Stop word list : stop word list
+    :return:
+    """
     stp_list.remove(word)
