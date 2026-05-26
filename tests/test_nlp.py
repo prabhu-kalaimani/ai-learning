@@ -22,4 +22,3 @@ def test_remove_stop_words_2():
     status = filter_stop_words(text)
     logger.info(f"Filtered Text : {status: >25}")
     assert status == "hello world... welcome nlp testing...", f"Output = {status}"
-
