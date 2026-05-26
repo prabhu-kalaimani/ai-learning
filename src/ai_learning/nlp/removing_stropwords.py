@@ -36,7 +36,6 @@ def filter_stop_words(inp_str: str, lang: str = "eng") -> str:
     )
     return status
 
-
 def append_stopwords(word: str, stp_list: list) -> None:
     """
     Method to add new words to stop word list.
@@ -45,7 +44,6 @@ def append_stopwords(word: str, stp_list: list) -> None:
     :return: None
     """
     stp_list.append(word)
-
 
 def remove_stopwords(word: str, stp_list: dict) -> None:
     """
