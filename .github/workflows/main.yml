@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  verify_ruff_and test:
+  verify_ruff_and_test:
     runs-on: ubuntu-latest
 
     steps:
