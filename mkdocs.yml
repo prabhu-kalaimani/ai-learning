@@ -6,6 +6,7 @@ theme:
 nav:
   - Home: index.md
   - NLP: nlp.md
+  - Reference /Examples: tests.md
 
 markdown_extensions:
   - pymdownx.snippets:

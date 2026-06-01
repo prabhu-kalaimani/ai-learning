@@ -8,7 +8,7 @@ dynamic modification capabilities for NLP preprocessing.
 
 import copy
 from ai_learning.logger_config import get_logger
-from ai_learning.nlp.removing_stropwords import FilterStopWords
+from ai_learning.nlp.stopwords import FilterStopWords
 
 logger = get_logger(__name__)
 

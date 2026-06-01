@@ -15,8 +15,10 @@ NLTK provides:
 
 import nltk
 from nltk.tokenize import word_tokenize, sent_tokenize
+
 # download punk_tab which is used to find where the sentences begin
-nltk.download('punkt_tab')
+nltk.download("punkt_tab")
+
 
 class Tokenize:
     """Utility class for NLTK-based text tokenization."""
@@ -33,7 +35,7 @@ class Tokenize:
         Example:
         >>> word_tokenize("Hello world")
         ['Hello', 'world']
-    """
+        """
         if not isinstance(txt, str):
             raise TypeError("Input text must be a string")
         return word_tokenize(txt.lower())

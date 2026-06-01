@@ -42,7 +42,3 @@ def test_st():
     assert len(result) == 2
     assert "hello there." in result
     assert "welcome to sentence tokenizer" in result
-
-
-
-
