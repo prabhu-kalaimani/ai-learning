@@ -11,6 +11,6 @@
 ```
 ## Stemming
 ```python
---8<-- "tests/test_stemming.py"
+--8<-- "tests/test_stemming_lamitization.py"
 ```
 
