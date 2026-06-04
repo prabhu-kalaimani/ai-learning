@@ -48,12 +48,13 @@ Lemmatization:
     many words may already be in their lemma form and therefore remain
     unchanged.
 """
-import nltk
 
-nltk.download('wordnet')
+import nltk
 from nltk.stem import PorterStemmer
 from ai_learning import logger_config
 from nltk.stem import WordNetLemmatizer
+
+nltk.download("wordnet")
 
 logger = logger_config.get_logger(__name__)
 

@@ -16,23 +16,115 @@ deterministic results.
 """
 
 from ai_learning.nlp.ngrams import Ngrams
-import pandas as pd
 
 inp_txt = [
-    'the', 'rise', 'of', 'artificial', 'intelligence', 'has', 'led', 'to',
-    'significant', 'advancements', 'in', 'natural', 'language', 'processing',
-    'computer', 'vision', 'and', 'other', 'fields', 'machine', 'learning',
-    'algorithms', 'are', 'becoming', 'more', 'sophisticated', 'enabling',
-    'computers', 'to', 'perform', 'complex', 'tasks', 'that', 'were', 'once',
-    'thought', 'to', 'be', 'the', 'exclusive', 'domain', 'of', 'humans',
-    'with', 'the', 'advent', 'of', 'deep', 'learning', 'neural', 'networks',
-    'have', 'become', 'even', 'more', 'powerful', 'capable', 'of',
-    'processing', 'vast', 'amounts', 'of', 'data', 'and', 'learning', 'from',
-    'it', 'in', 'ways', 'that', 'were', 'not', 'possible', 'before', 'as',
-    'a', 'result', 'ai', 'is', 'increasingly', 'being', 'used', 'in', 'a',
-    'wide', 'range', 'of', 'industries', 'from', 'healthcare', 'to',
-    'finance', 'to', 'transportation', 'and', 'its', 'impact', 'is', 'only',
-    'set', 'to', 'grow', 'in', 'the', 'years', 'to', 'come'
+    "the",
+    "rise",
+    "of",
+    "artificial",
+    "intelligence",
+    "has",
+    "led",
+    "to",
+    "significant",
+    "advancements",
+    "in",
+    "natural",
+    "language",
+    "processing",
+    "computer",
+    "vision",
+    "and",
+    "other",
+    "fields",
+    "machine",
+    "learning",
+    "algorithms",
+    "are",
+    "becoming",
+    "more",
+    "sophisticated",
+    "enabling",
+    "computers",
+    "to",
+    "perform",
+    "complex",
+    "tasks",
+    "that",
+    "were",
+    "once",
+    "thought",
+    "to",
+    "be",
+    "the",
+    "exclusive",
+    "domain",
+    "of",
+    "humans",
+    "with",
+    "the",
+    "advent",
+    "of",
+    "deep",
+    "learning",
+    "neural",
+    "networks",
+    "have",
+    "become",
+    "even",
+    "more",
+    "powerful",
+    "capable",
+    "of",
+    "processing",
+    "vast",
+    "amounts",
+    "of",
+    "data",
+    "and",
+    "learning",
+    "from",
+    "it",
+    "in",
+    "ways",
+    "that",
+    "were",
+    "not",
+    "possible",
+    "before",
+    "as",
+    "a",
+    "result",
+    "ai",
+    "is",
+    "increasingly",
+    "being",
+    "used",
+    "in",
+    "a",
+    "wide",
+    "range",
+    "of",
+    "industries",
+    "from",
+    "healthcare",
+    "to",
+    "finance",
+    "to",
+    "transportation",
+    "and",
+    "its",
+    "impact",
+    "is",
+    "only",
+    "set",
+    "to",
+    "grow",
+    "in",
+    "the",
+    "years",
+    "to",
+    "come",
 ]
 
 
@@ -47,13 +139,7 @@ def test_unigram_string():
     text = "Python"
     result = ng.extract_ngrams(text, 2)
 
-    assert result == [
-        ('P', 'y'),
-        ('y', 't'),
-        ('t', 'h'),
-        ('h', 'o'),
-        ('o', 'n')
-    ]
+    assert result == [("P", "y"), ("y", "t"), ("t", "h"), ("h", "o"), ("o", "n")]
 
 
 def test_unigram_array():
@@ -67,10 +153,7 @@ def test_unigram_array():
     txt_list = "I love python".split()
     result = ng.extract_ngrams(txt_list, 2)
 
-    assert result == [
-        ("I", "love"),
-        ("love", "python")
-    ]
+    assert result == [("I", "love"), ("love", "python")]
 
 
 def test_unigram_freq():
@@ -85,7 +168,7 @@ def test_unigram_freq():
     result = ng.extract_ngram_freq(inp_txt, 1, duration=5)
 
     # 'to' appears 7 times in the sample text
-    assert result[('to',)] == 7
+    assert result[("to",)] == 7
 
 
 def test_bigram_freq():
@@ -99,4 +182,4 @@ def test_bigram_freq():
     result = ng.extract_ngram_freq(inp_txt, 2, duration=5)
 
     # ('that', 'were') appears exactly twice in the sample text
-    assert result[('that', 'were')] == 2
+    assert result[("that", "were")] == 2

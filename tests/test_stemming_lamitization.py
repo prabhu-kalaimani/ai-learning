@@ -38,7 +38,7 @@ def test_ps_connect(word):
         ("leaning", "lean"),
         ("learnt", "learnt"),
         ("learners", "learner"),
-    ]
+    ],
 )
 def test_ps_learn(word, expected):
     """Test stemming for variations of the word 'learn'.
@@ -70,14 +70,18 @@ def test_ps_check_case():
         result = st.porter_stemming(word)
         assert result == "connect"
 
-@pytest.mark.parametrize("word, expected", [
-    ("coNNecting","connecting"),
-    ("Connected", "connected"),
-    ("connectivity","connectivity"),
-    ("connectS", "connects"),
-    ("likes","like"),
-    ("worse","worse")
-])
+
+@pytest.mark.parametrize(
+    "word, expected",
+    [
+        ("coNNecting", "connecting"),
+        ("Connected", "connected"),
+        ("connectivity", "connectivity"),
+        ("connectS", "connects"),
+        ("likes", "like"),
+        ("worse", "worse"),
+    ],
+)
 def test_lam(word, expected):
     lm = Lamitization()
     result = lm.word_lamitizer(word)

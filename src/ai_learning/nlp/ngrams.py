@@ -107,7 +107,7 @@ class Ngrams:
         freq = pd.Series(nltk.ngrams(text, ngram_weight)).value_counts()
         logger.info(freq)
 
-        freq[:10].sort_values().plot(kind='bar')
+        freq[:10].sort_values().plot(kind="bar")
 
         if duration is None:
             plot.show()
