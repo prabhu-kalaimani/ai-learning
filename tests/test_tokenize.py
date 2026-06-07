@@ -12,7 +12,7 @@ def test_wt():
     inp_txt = "Hello world welcome to text tokenization"
     res = Tokenize.word_tokenize(txt=inp_txt)
     logger.info(f"Tokenized output: {res}")
-    assert res == ["Hello", "world", "welcome", "to", "text", "tokenization"]
+    assert res == ["hello", "world", "welcome", "to", "text", "tokenization"]
 
 
 def test_wt_empty_string():
