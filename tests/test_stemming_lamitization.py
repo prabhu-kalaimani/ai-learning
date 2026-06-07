@@ -83,7 +83,7 @@ def test_ps_check_case():
     ],
 )
 def test_lam(word, expected):
-    lm = Lamitization()
+    lm = Lemmatization()
     result = lm.word_lamitizer(word)
     logger.info(f"{word} : {result}")
     assert result == expected
