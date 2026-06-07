@@ -114,5 +114,4 @@ class Ngrams:
         else:
             plot.pause(duration)
             plot.close()
-
         return freq
