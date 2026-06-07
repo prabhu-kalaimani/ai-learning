@@ -11,7 +11,7 @@ This test suite validates the behavior of the `Stemming` class and its
 
 import pytest
 from ai_learning import logger_config
-from ai_learning.nlp.stemming_lamitization import Stemming, Lamitization
+from ai_learning.nlp.stemming_lamitization import Stemming, Lemmatization
 
 logger = logger_config.get_logger(__name__)
 
