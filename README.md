@@ -201,7 +201,7 @@ poetry run pytest tests/
 poetry run pytest tests/ -v
 
 # Run a specific test file
-poetry run pytest tests/test_stopwords.py
+poetry run pytest tests/test_nlp.py
 ```
 
 ---
