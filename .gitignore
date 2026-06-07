@@ -18,11 +18,14 @@ __pycache__/
 .site/
 
 # Test cache folder  and files
-.pytest_cache/
 .idea
+.ruff_cahce/
+.pytest_cache/
+node_modules/
 
 # PyCharm
 .idea/
 
 # VSCode
 .vscode/
+
