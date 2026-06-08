@@ -291,7 +291,6 @@ GitHub Actions runs automatically on every push and pull request to `main`:
 
 See [`.github/workflows/main.yml`](.github/workflows/main.yml) for the full pipeline.
 
-
 ---
 
 ## Commit Message Format (Required for Versioning)
