@@ -21,7 +21,6 @@ def test_wt_empty_string():
     logger.info(f"Tokenized output: {res}")
     assert res == []
 
-
 def test_wt_none():
     """Test that None input raises TypeError
 
