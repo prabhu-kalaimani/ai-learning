@@ -290,3 +290,29 @@ GitHub Actions runs automatically on every push and pull request to `main`:
 - Runs `ruff format --check` for formatting
 
 See [`.github/workflows/main.yml`](.github/workflows/main.yml) for the full pipeline.
+
+
+---
+
+## Commit Message Format (Required for Versioning)
+
+This project uses **semantic‑release** to automatically generate versions, changelogs, and GitHub releases.  
+To trigger a release, commit messages **must** follow the required format.
+
+### Allowed Commit Types
+
+| Type | Meaning | Release Triggered |
+|------|---------|-------------------|
+| `dev:` | Development changes, small fixes | patch |
+| `bug:` | Bug fixes | patch |
+| `feat:` | New features | minor |
+| `release:` | Breaking changes or major upgrades | major |
+
+### Examples
+
+```bash
+dev: updated tokenizer logic
+bug: fixed stopword removal issue
+feat: added text normalization module
+release: migrated to new NLP architecture
+
