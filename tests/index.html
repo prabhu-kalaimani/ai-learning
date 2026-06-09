@@ -1,0 +1,707 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../nlp/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Reference /Examples - LLM ( Large Language Model )</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#test-and-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LLM ( Large Language Model )" class="md-header__button md-logo" aria-label="LLM ( Large Language Model )" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LLM ( Large Language Model )
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reference /Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LLM ( Large Language Model )" class="md-nav__button md-logo" aria-label="LLM ( Large Language Model )" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    LLM ( Large Language Model )
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../nlp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NLP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference /Examples
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference /Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stopwords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stopwords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenize-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokenize Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stemming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stemming
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stopwords" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stopwords
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tokenize-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tokenize Tests
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stemming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Stemming
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="test-and-reference">Test and Reference</h1>
+<h2 id="stopwords">Stopwords</h2>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Test Suite for NLP Stopword Filtering</span>
+
+<span class="sd">This module contains unit tests for validating the functionality of the</span>
+<span class="sd">FilterStopWords class, which provides stopword loading, filtering, and</span>
+<span class="sd">dynamic modification capabilities for NLP preprocessing.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">copy</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ai_learning.logger_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_logger</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ai_learning.nlp.stopwords</span><span class="w"> </span><span class="kn">import</span> <span class="n">FilterStopWords</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_filter_stop_words_1</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test Case: Basic English stopword filtering</span>
+
+<span class="sd">    Purpose:</span>
+<span class="sd">        Ensures that the stopword filtering logic correctly removes common</span>
+<span class="sd">        English stopwords from a natural-language sentence.</span>
+
+<span class="sd">    Expected Behavior:</span>
+<span class="sd">        Only meaningful, non-stopword tokens should remain in the output.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;It was too far to go to the shop and he did not want her to walk&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">FilterStopWords</span><span class="o">.</span><span class="n">filter_stop_words</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Filtered Text : </span><span class="si">{</span><span class="n">status</span><span class="si">:</span><span class="s2"> &gt;25</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;far go shop want walk&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Output = </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_filter_stop_words_2</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test Case: Stopword filtering with punctuation</span>
+
+<span class="sd">    Purpose:</span>
+<span class="sd">        Verifies that punctuation is preserved and only stopwords are removed.</span>
+<span class="sd">        Ensures lowercase normalization and correct token filtering.</span>
+
+<span class="sd">    Expected Behavior:</span>
+<span class="sd">        Non-stopword tokens remain intact, including punctuation.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello world... welcome to nlp testing...&quot;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">FilterStopWords</span><span class="o">.</span><span class="n">filter_stop_words</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Filtered Text : </span><span class="si">{</span><span class="n">status</span><span class="si">:</span><span class="s2"> &gt;25</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">status</span> <span class="o">==</span> <span class="s2">&quot;hello world... welcome nlp testing...&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Output = </span><span class="si">{</span><span class="n">status</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_remove_stopwords</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test Case: Dynamic stopword removal</span>
+
+<span class="sd">    Purpose:</span>
+<span class="sd">        Validates that removing a word from the stopword list correctly affects</span>
+<span class="sd">        subsequent filtering operations.</span>
+
+<span class="sd">    Notes:</span>
+<span class="sd">        - A deep copy is required because get_stopwords() returns a reference</span>
+<span class="sd">          to the same underlying list.</span>
+<span class="sd">        - Removing a stopword should cause it to appear in the filtered output.</span>
+
+<span class="sd">    Expected Behavior:</span>
+<span class="sd">        - The removed word must exist in the original stopword list.</span>
+<span class="sd">        - The removed word must NOT exist in the updated stopword list.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Load default English stopwords</span>
+    <span class="n">FilterStopWords</span><span class="o">.</span><span class="n">load_stop_words</span><span class="p">()</span>
+
+    <span class="c1"># Deep copy to avoid reference sharing</span>
+    <span class="n">org_stp_words</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">FilterStopWords</span><span class="o">.</span><span class="n">get_stopwords</span><span class="p">())</span>
+
+    <span class="n">remove_word</span> <span class="o">=</span> <span class="s2">&quot;all&quot;</span>  <span class="c1"># Removing this should allow it to appear in filtered text</span>
+    <span class="n">FilterStopWords</span><span class="o">.</span><span class="n">remove_stopwords</span><span class="p">(</span><span class="n">remove_word</span><span class="p">)</span>
+
+    <span class="n">removed_stp_words</span> <span class="o">=</span> <span class="n">FilterStopWords</span><span class="o">.</span><span class="n">get_stopwords</span><span class="p">()</span>
+
+    <span class="c1"># Assertions</span>
+    <span class="k">assert</span> <span class="n">remove_word</span> <span class="ow">in</span> <span class="n">org_stp_words</span><span class="p">,</span> <span class="s2">&quot;Word should exist in original stopword list&quot;</span>
+    <span class="k">assert</span> <span class="n">remove_word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">removed_stp_words</span><span class="p">,</span> <span class="p">(</span>
+        <span class="s2">&quot;Word should be removed from stopword list&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+<h2 id="tokenize-tests">Tokenize Tests</h2>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;Test module for the Tokenize class.&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ai_learning.nlp.tokenization</span><span class="w"> </span><span class="kn">import</span> <span class="n">Tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ai_learning.logger_config</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_logger</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">get_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_wt</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test that valid input is correctly split into word tokens.&quot;&quot;&quot;</span>
+    <span class="n">inp_txt</span> <span class="o">=</span> <span class="s2">&quot;Hello world welcome to text tokenization&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">Tokenize</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">txt</span><span class="o">=</span><span class="n">inp_txt</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tokenized output: </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="p">[</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span> <span class="s2">&quot;world&quot;</span><span class="p">,</span> <span class="s2">&quot;welcome&quot;</span><span class="p">,</span> <span class="s2">&quot;to&quot;</span><span class="p">,</span> <span class="s2">&quot;text&quot;</span><span class="p">,</span> <span class="s2">&quot;tokenization&quot;</span><span class="p">]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_wt_empty_string</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test that empty string input returns an empty list.&quot;&quot;&quot;</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="n">Tokenize</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">txt</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Tokenized output: </span><span class="si">{</span><span class="n">res</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">res</span> <span class="o">==</span> <span class="p">[]</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_wt_none</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test that None input raises TypeError</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        None</span>
+
+<span class="sd">    Raises:</span>
+<span class="sd">        TypeError: If txt is not a string.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">pytest</span><span class="o">.</span><span class="n">raises</span><span class="p">(</span><span class="ne">TypeError</span><span class="p">):</span>
+        <span class="n">Tokenize</span><span class="o">.</span><span class="n">word_tokenize</span><span class="p">(</span><span class="n">txt</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_st</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test sentence tokenizer&quot;&quot;&quot;</span>
+    <span class="n">inp_txt</span> <span class="o">=</span> <span class="s2">&quot;HeLLo there. Welcome to sentence tokenizer&quot;</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">Tokenize</span><span class="o">.</span><span class="n">sentence_tokenize</span><span class="p">(</span><span class="n">inp_txt</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span>
+    <span class="k">assert</span> <span class="s2">&quot;hello there.&quot;</span> <span class="ow">in</span> <span class="n">result</span>
+    <span class="k">assert</span> <span class="s2">&quot;welcome to sentence tokenizer&quot;</span> <span class="ow">in</span> <span class="n">result</span>
+</code></pre></div>
+<h2 id="stemming">Stemming</h2>
+<div class="highlight"><pre><span></span><code><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Tests for the Stemming module.</span>
+
+<span class="sd">This test suite validates the behavior of the `Stemming` class and its</span>
+<span class="sd">`porter_stemming` method. It covers:</span>
+
+<span class="sd">- Basic stemming behavior for common verb forms</span>
+<span class="sd">- Case-insensitive stemming</span>
+<span class="sd">- Parametrized stemming tests for multiple word variations</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pytest</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ai_learning</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger_config</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">ai_learning.nlp.stemming_lamitization</span><span class="w"> </span><span class="kn">import</span> <span class="n">Stemming</span><span class="p">,</span> <span class="n">Lemmatization</span>
+
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logger_config</span><span class="o">.</span><span class="n">get_logger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span><span class="s2">&quot;word&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;connecting&quot;</span><span class="p">,</span> <span class="s2">&quot;connected&quot;</span><span class="p">,</span> <span class="s2">&quot;connecting&quot;</span><span class="p">,</span> <span class="s2">&quot;connects&quot;</span><span class="p">])</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ps_connect</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test that different forms of &#39;connect&#39; stem to &#39;connect&#39;.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        word (str): A variation of the word &quot;connect&quot;.</span>
+
+<span class="sd">    Asserts:</span>
+<span class="sd">        The stemmed output equals &quot;connect&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">Stemming</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">porter_stemming</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">&quot;connect&quot;</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;word, expected&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;learn&quot;</span><span class="p">,</span> <span class="s2">&quot;learn&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;leaning&quot;</span><span class="p">,</span> <span class="s2">&quot;lean&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;learnt&quot;</span><span class="p">,</span> <span class="s2">&quot;learnt&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;learners&quot;</span><span class="p">,</span> <span class="s2">&quot;learner&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ps_learn</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test stemming for variations of the word &#39;learn&#39;.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        word (str): Input word to stem.</span>
+<span class="sd">        expected (str): Expected stemmed output.</span>
+
+<span class="sd">    Asserts:</span>
+<span class="sd">        The stemmed output matches the expected value.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">Stemming</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">porter_stemming</span><span class="p">(</span><span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">test_ps_check_case</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Test that stemming is case-insensitive.</span>
+
+<span class="sd">    This test ensures that mixed-case variations of &#39;connect&#39; all stem</span>
+<span class="sd">    to the same lowercase root.</span>
+
+<span class="sd">    Asserts:</span>
+<span class="sd">        All variations stem to &quot;connect&quot;.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">inpt_txt</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;coNNecting&quot;</span><span class="p">,</span> <span class="s2">&quot;Connected&quot;</span><span class="p">,</span> <span class="s2">&quot;ConnectinG&quot;</span><span class="p">,</span> <span class="s2">&quot;connectS&quot;</span><span class="p">]</span>
+    <span class="n">st</span> <span class="o">=</span> <span class="n">Stemming</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">inpt_txt</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">porter_stemming</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+        <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="s2">&quot;connect&quot;</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">parametrize</span><span class="p">(</span>
+    <span class="s2">&quot;word, expected&quot;</span><span class="p">,</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">&quot;coNNecting&quot;</span><span class="p">,</span> <span class="s2">&quot;connecting&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;Connected&quot;</span><span class="p">,</span> <span class="s2">&quot;connected&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;connectivity&quot;</span><span class="p">,</span> <span class="s2">&quot;connectivity&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;connectS&quot;</span><span class="p">,</span> <span class="s2">&quot;connects&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;likes&quot;</span><span class="p">,</span> <span class="s2">&quot;like&quot;</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">&quot;worse&quot;</span><span class="p">,</span> <span class="s2">&quot;worse&quot;</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">test_lam</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">expected</span><span class="p">):</span>
+    <span class="n">lm</span> <span class="o">=</span> <span class="n">Lemmatization</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">lm</span><span class="o">.</span><span class="n">word_lemmatizer</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2"> : </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
