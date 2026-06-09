@@ -108,6 +108,7 @@ class Ngrams:
         logger.info(freq)
 
         freq[:10].sort_values().plot(kind="bar")
+        plot.title(f"N - {ngram_weight} gram plotting")
 
         if duration is None:
             plot.show()
